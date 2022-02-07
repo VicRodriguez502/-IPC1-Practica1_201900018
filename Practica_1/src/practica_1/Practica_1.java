@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 
 public class Practica_1 {
-    static int [][] matriz = null; //creo matriz nula para ingresar datos
 
     public static void main(String[] args) {
         
@@ -14,8 +13,6 @@ public class Practica_1 {
         int num ;
         String name; 
         String grande ;
-        int row;
-        int column;
         int food;
         int par;
         int trap;
@@ -40,7 +37,10 @@ public class Practica_1 {
             System.out.print("Ingrese su Nombre:");
             name = tusita.next(); 
             System.out.println("Ingrese del tamaño del tablero [m,n]");
-            grande = tusita.next() ; //Creando el ingreso de datos con arreglo y split         
+            grande = tusita.next(); //Creando el ingreso de datos con arreglo y split  
+            String[] matriz = grande.split(",");
+            int row = Integer.parseInt(matriz[0]);
+            int column = Integer.parseInt(matriz[1]);
             System.out.println("Ingresa Cantidad de comida [0-28]");
             food = tusita.nextInt() ;
             System.out.println("Ingrese cantidad de paredes [0-13]");
@@ -50,11 +50,12 @@ public class Practica_1 {
             //Los datos de abajo son todos los que el usuario ingreso en la pantalla
             System.out.println("ღღღღღღღღღღღღღღღღღღღღღღღღღღღღღღ");
             System.out.println("Ingrese su Nombre:"+name);
-            System.out.println("Ingrese del tamaño del tablero [mxn]:"+grande); 
+            System.out.println("Ingrese del tamaño del tablero [mxn]:"+row+","+column); 
             System.out.println("Ingresa Cantidad de comida [0-28]:"+food);
             System.out.println("Ingrese cantidad de paredes [0-13]:"+par);
             System.out.println("Ingrese cantidad de Trampas [0-10]:"+trap);
             System.out.println("ღღღღღღღღღღღღღღღღღღღღღღღღღღღღღღ");
+            
         }
 
         if(num == 2){
