@@ -1,18 +1,21 @@
 
 package practica_1;
 
+import java.util.Random;
 import java.util.Scanner;
 
+
 public class Practica_1 {
+    static int [][] matriz = null; //creo matriz nula para ingresar datos
 
     public static void main(String[] args) {
         
         //variables para el juego
         int num ;
         String name; 
-        String grande;
-        int fila;
-        int columna;
+        String grande ;
+        int row;
+        int column;
         int food;
         int par;
         int trap;
@@ -36,14 +39,15 @@ public class Practica_1 {
             System.out.println("¿Estás listo para vencer el juego?");
             System.out.print("Ingrese su Nombre:");
             name = tusita.next(); 
-            System.out.println("Ingrese del tamaño del tablero [mxn]");
-            grande = tusita.next() ;
+            System.out.println("Ingrese del tamaño del tablero [m,n]");
+            grande = tusita.next() ; //Creando el ingreso de datos con arreglo y split         
             System.out.println("Ingresa Cantidad de comida [0-28]");
             food = tusita.nextInt() ;
             System.out.println("Ingrese cantidad de paredes [0-13]");
             par = tusita.nextInt() ;
             System.out.println("Ingrese cantidad de Trampas [0-10]");
             trap = tusita.nextInt() ;
+            //Los datos de abajo son todos los que el usuario ingreso en la pantalla
             System.out.println("ღღღღღღღღღღღღღღღღღღღღღღღღღღღღღღ");
             System.out.println("Ingrese su Nombre:"+name);
             System.out.println("Ingrese del tamaño del tablero [mxn]:"+grande); 
@@ -52,7 +56,7 @@ public class Practica_1 {
             System.out.println("Ingrese cantidad de Trampas [0-10]:"+trap);
             System.out.println("ღღღღღღღღღღღღღღღღღღღღღღღღღღღღღღ");
         }
-        
+
         if(num == 2){
             //En este iff mostare la tabla de posiciones
             System.out.println("JUGADORES:") ;
@@ -65,5 +69,5 @@ public class Practica_1 {
         } 
     }while (num <= 3);System.out.println("Ingrese Opción Correcta");
         
-    }      
+    }    
 }
